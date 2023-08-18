@@ -6,7 +6,7 @@
   --cloud: #f4f4fd;
   --ocean: #404bbf;
   --cornflower: #e7e9fc;
-  --transit: 2250ms cubic-bezier(0.4, 0, 0.2, 1);
+  --transit: 250ms cubic-bezier(0.4, 0, 0.2, 1);
   --navyblue-modal: rgba(46, 47, 66, 0.4);
   --lightslate: #8e8f99;
 }
@@ -711,13 +711,14 @@ address {
   font-size: 18px;
   height: 40px;
   border-radius: 4px;
+  background-color: transparent;
   border: 1px solid var(--navyblue-modal);
   color: var(--navyblue);
   outline: transparent;
-  transition: border var(--transit);
+  transition: border-color var(--transit);
 }
 .callback-input:focus {
-  border: 1px solid var(--accent);
+  border-color: var(--accent);
 }
 .callback-input-icon {
   position: absolute;
@@ -735,7 +736,8 @@ address {
 .callback-textarea-data {
   margin-bottom: 16px;
 }
-.callback-textearea {
+.callback-textarea {
+  background-color: transparent;
   outline: transparent;
   width: 100%;
   height: 120px;
@@ -744,16 +746,16 @@ address {
   resize: none;
   border-radius: 4px;
   transition: border-color var(--transit);
-  border: 1px solid var(--navyblue-modal, rgba(46, 47, 66, 0.4));
+  border: 1px solid var(--navyblue-modal);
   color: var(--navyblue-modal);
   font-size: 12px;
   line-height: 1.17;
   letter-spacing: 0.04em;
 }
-.callback-textearea:focus {
-  border: 1px solid var(--accent);
+.callback-textarea:focus {
+  border-color: var(--accent);
 }
-.callback-textearea::placeholder {
+.callback-textarea::placeholder {
   color: var(--navyblue-modal);
   font-size: 12px;
   line-height: 1.17;
@@ -769,6 +771,7 @@ address {
   align-items: center;
   justify-content: center;
   fill: transparent;
+  margin-right: 8px;
   width: 16px;
   height: 16px;
   border: 1px solid rgba(46, 47, 66, 0.4);
@@ -776,7 +779,7 @@ address {
   transition: background-color var(--transit), border var(--transit),
     fill var(--transit);
 }
-.callback-checkbox:checked ~ .callback-fake-check {
+.callback-checkbox:checked ~ .callback-terms .callback-fake-check {
   background-color: var(--ocean);
   fill: var(--cloud);
   border: none;
