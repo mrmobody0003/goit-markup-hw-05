@@ -601,8 +601,7 @@ address {
   justify-content: center;
   border: none;
   height: 40px;
-  min-width: 164px;
-  gap: 16px;
+  min-width: 165px;
   border-radius: 4px;
   background: var(--accent);
   transition: background-color var(--transit);
@@ -612,6 +611,7 @@ address {
   background-color: var(--ocean);
 }
 .footer-subscribe-btn-icon {
+  margin-left: 16px
   fill: var(--white);
 }
 
