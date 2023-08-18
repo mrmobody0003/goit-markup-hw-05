@@ -730,7 +730,7 @@ address {
 }
 
 .callback-input:focus ~ .callback-input-icon {
-  fill: var(--ocean);
+  fill: var(--accent);
 }
 
 .callback-textarea-data {
@@ -746,7 +746,7 @@ address {
   resize: none;
   border-radius: 4px;
   transition: border-color var(--transit);
-  border: 1px solid var(--navyblue-modal);
+  border: 1px solid var(--navyblue-modal, rgba(46, 47, 66, 0.4));
   color: var(--navyblue-modal);
   font-size: 12px;
   line-height: 1.17;
